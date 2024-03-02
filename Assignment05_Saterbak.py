@@ -51,6 +51,9 @@ class BasicMathOperations:
         hypotenuse = ((num1Sqr)+(num2Sqr))**(1/2)
         print("The Hypotenuse of a triangle with sides",str(num1),"and",str(num2),"is:",hypotenuse)
         
+    def rectangleArea(self,num1,num2):
+        area = num1*num2
+        print("The Area of a Square with Sides",str(num1),"and",str(num2),"is:",str(area))
 
 Calc = BasicMathOperations()
 
@@ -68,4 +71,6 @@ Calc = BasicMathOperations()
 
 # print(Calc.calculateSquare(4))
 
-Calc.calculateHypotenuse(5,12)
+# Calc.calculateHypotenuse(5,12)
+
+Calc.rectangleArea(4,7)

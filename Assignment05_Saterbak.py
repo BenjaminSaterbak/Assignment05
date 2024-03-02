@@ -175,7 +175,10 @@ Please Select an Option Below (1-10)
             try:
                 num1 = int(input("Please input your first number: "))
                 num2 = int(input("Please enter your second number: "))
-                break
+                if (num1 and num2) > 0:
+                    break
+                else:
+                    print("Invalid input. Please enter positive integers")
             except ValueError:
                 print("Invalid input. Please enter integers")
         

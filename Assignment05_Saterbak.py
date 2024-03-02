@@ -6,7 +6,7 @@ class BasicMathOperations:
         pass
 
     def greetUser(self,firstName,lastName):
-        print("Welcome to Basic Math Operations, "+str(firstName),str(lastName))
+        print("Welcome to Benjamin's Python Calculator, "+str(firstName),str(lastName))
 
     def addNumbers(self,num1,num2):
         sum = num1 + num2
@@ -46,8 +46,8 @@ class BasicMathOperations:
         return square
     
     def calculateHypotenuse(self,num1,num2):
-        num1Sqr = Calc.calculateSquare(num1)
-        num2Sqr = Calc.calculateSquare(num2)
+        num1Sqr = self.calculateSquare(num1)
+        num2Sqr = self.calculateSquare(num2)
         hypotenuse = ((num1Sqr)+(num2Sqr))**(1/2)
         print("The Hypotenuse of a triangle with sides",str(num1),"and",str(num2),"is:",hypotenuse)
         
@@ -61,8 +61,6 @@ class BasicMathOperations:
 
     def getType(self,variable):
         return type(variable)
-
-
 
 
 def main():
@@ -82,7 +80,12 @@ Please Select an Option Below (1-10)
 9) Number Power Calculator
 10) Get Data Type
 ---------------------------""")
-    userChoice = input("Selection?: ")
+    userChoice = int(input("Selection?: "))
+    if userChoice == 1:
+        firstName = input("Please input your first name: ")
+        lastName = input("Please input your last name: ")
+        Calc.greetUser(firstName,lastName)
+    
 
 # Calc.greetUser("Benjamin","Saterbak")
 
@@ -105,3 +108,6 @@ Please Select an Option Below (1-10)
 # Calc.numberPower(2,4)
 
 # print(Calc.getType([1,4,5]))
+        
+
+main()

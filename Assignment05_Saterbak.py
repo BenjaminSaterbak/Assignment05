@@ -22,9 +22,7 @@ class BasicMathOperations:
             outputVal = num1 * num2
         elif operator == "/":
             outputVal = num1 / num2
-        else:
-            print("Please enter a valid operator (+,-,*,/)")
-        print(outputVal)
+        print(str(num1)+str(operator)+str(num2),"=",str(outputVal))
 
     def squareNumber(self,num):
         outputVal = num**2
@@ -99,6 +97,21 @@ Please Select an Option Below (1-10)
         
         Calc.addNumbers(num1,num2)
 
+    elif userChoice == 3:
+        while True:
+            try:
+                num1 = int(input("Please input your first number: "))
+                operator = str(input("Please enter an operator (+,-,*,/): "))
+                num2 = int(input("Please enter your second number: "))
+                
+                if num2 == 0 and operator == "/":
+                    print("Cannot divide by zero")
+                elif operator == "+" or "-" or "*" or "/":
+                    break
+            except ValueError:
+                print("Invalid input. Please enter integers and a valid operator (+,-,*,/)")
+
+    Calc.performOperator(num1,num2,operator)
 # Calc.greetUser("Benjamin","Saterbak")
 
 # Calc.addNumbers(4,7)

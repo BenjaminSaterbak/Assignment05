@@ -44,6 +44,12 @@ class BasicMathOperations:
     def calculateSquare(self,num):
         square = num**2
         return square
+    
+    def calculateHypotenuse(self,num1,num2):
+        num1Sqr = Calc.calculateSquare(num1)
+        num2Sqr = Calc.calculateSquare(num2)
+        hypotenuse = ((num1Sqr)+(num2Sqr))**(1/2)
+        print("The Hypotenuse of a triangle with sides",str(num1),"and",str(num2),"is:",hypotenuse)
         
 
 Calc = BasicMathOperations()
@@ -60,4 +66,6 @@ Calc = BasicMathOperations()
 
 # Calc.countBetween(4,14)
 
-print(Calc.calculateSquare(4))
+# print(Calc.calculateSquare(4))
+
+Calc.calculateHypotenuse(5,12)

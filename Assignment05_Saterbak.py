@@ -8,15 +8,17 @@ class BasicMathOperations:
     def greetUser(self,firstName,lastName):
         print("Welcome to Basic Math Operations, "+str(firstName),str(lastName))
 
-
+    def addNumbers(self,num1,num2):
+        sum = num1 + num2
+        print("The Sum is: "+str(sum))
 
 
 
 
 Calc = BasicMathOperations()
 
-Calc.greetUser("Benjamin","Saterbak")
+# Calc.greetUser("Benjamin","Saterbak")
 
-
+Calc.addNumbers(4,7)
 
 

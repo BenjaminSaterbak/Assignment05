@@ -40,6 +40,10 @@ class BasicMathOperations:
         print("The Sequence of numbers between",str(num1),"and",str(num2),"is:")
         for i in range(num1,num2+1):
             print(i)
+
+    def computeHypotenuse(self,num1,num2):
+        hypotenuse = ((num1**2)+(num2**2))**(1/2)
+        print("The Hypotenuse of a triangle with sides",str(num1),"and",str(num2),"is:",hypotenuse)
         
 
 Calc = BasicMathOperations()
@@ -54,4 +58,6 @@ Calc = BasicMathOperations()
 
 # Calc.factorial(5)
 
-Calc.countBetween(4,14)
+# Calc.countBetween(4,14)
+
+Calc.computeHypotenuse(5,12)

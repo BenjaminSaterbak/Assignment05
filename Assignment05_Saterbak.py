@@ -81,7 +81,8 @@ Please Select an Option Below (1-10)
 ---------------------------""")
         try:
             userChoice = int(input("Selection?: "))
-            break
+            if (userChoice > 0) and (userChoice < 11):
+                break
         except ValueError:
             print("Invalid Input. Please enter an integer 1-10.")
     print("---------------------------")
@@ -128,12 +129,37 @@ Please Select an Option Below (1-10)
         
         Calc.squareNumber(num1)
 
+    elif userChoice == 5:
+        while True:
+            try:
+                num1 = int(input("Please input your number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.factorial(num1)
 
+    elif userChoice == 6:
+        while True:
+            try:
+                num1 = int(input("Please input your first number: "))
+                num2 = int(input("Please enter your second number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.countBetween(num1,num2)
 
-
-
-
-
+    elif userChoice == 7:
+        while True:
+            try:
+                num1 = int(input("Please input your first number: "))
+                num2 = int(input("Please enter your second number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.calculateHypotenuse(num1,num2)
 
 
 

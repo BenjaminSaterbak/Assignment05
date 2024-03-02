@@ -26,6 +26,11 @@ class BasicMathOperations:
             print("Please enter a valid operator (+,-,*,/)")
         print(outputVal)
 
+    def squareNumber(self,num):
+        outputVal = num**2
+        print(str(num),"Squared is:",str(outputVal))
+
+
 
 Calc = BasicMathOperations()
 
@@ -33,4 +38,6 @@ Calc = BasicMathOperations()
 
 # Calc.addNumbers(4,7)
 
-Calc.performOperator(9,3,"/")
+# Calc.performOperator(9,3,"/")
+
+Calc.squareNumber(8)

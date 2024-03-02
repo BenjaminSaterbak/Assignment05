@@ -59,7 +59,8 @@ class BasicMathOperations:
         power = num1**num2
         print(str(num1)+"^"+str(num2),"=",str(power))
 
-
+    def getType(self,variable):
+        return type(variable)
 
 Calc = BasicMathOperations()
 
@@ -81,4 +82,6 @@ Calc = BasicMathOperations()
 
 # Calc.rectangleArea(4,7)
 
-Calc.numberPower(2,4)
+# Calc.numberPower(2,4)
+
+print(Calc.getType([1,4,5]))

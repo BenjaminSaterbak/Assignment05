@@ -62,7 +62,27 @@ class BasicMathOperations:
     def getType(self,variable):
         return type(variable)
 
-Calc = BasicMathOperations()
+
+
+
+def main():
+    Calc = BasicMathOperations()
+    print("""
+Benjamin's Python Calculor
+---------------------------
+Please Select an Option Below (1-10)
+1) User Greeting
+2) Add Two Numbers
+3) Operator Calculations with Two Numbers
+4) Square a Number
+5) Find the Factorial of a Number
+6) Counting between Two Values
+7) Hypotenuse Calculator
+8) Rectangle Area Calculator
+9) Number Power Calculator
+10) Get Data Type
+---------------------------""")
+    userChoice = input("Selection?: ")
 
 # Calc.greetUser("Benjamin","Saterbak")
 
@@ -84,4 +104,4 @@ Calc = BasicMathOperations()
 
 # Calc.numberPower(2,4)
 
-print(Calc.getType([1,4,5]))
+# print(Calc.getType([1,4,5]))

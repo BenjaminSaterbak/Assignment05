@@ -36,7 +36,11 @@ class BasicMathOperations:
             outputVal *= i
         print("The Factorial of",str(num),"is:",str(outputVal))
 
-
+    def countBetween(self,num1,num2):
+        print("The Sequence of numbers between",str(num1),"and",str(num2),"is:")
+        for i in range(num1,num2+1):
+            print(i)
+        
 
 Calc = BasicMathOperations()
 
@@ -48,4 +52,6 @@ Calc = BasicMathOperations()
 
 # Calc.squareNumber(8)
 
-Calc.factorial(5)
+# Calc.factorial(5)
+
+Calc.countBetween(4,14)

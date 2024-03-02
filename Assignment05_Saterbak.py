@@ -30,6 +30,12 @@ class BasicMathOperations:
         outputVal = num**2
         print(str(num),"Squared is:",str(outputVal))
 
+    def factorial(self,num):
+        outputVal = 1
+        for i in range(num,0,-1):
+            outputVal *= i
+        print("The Factorial of",str(num),"is:",str(outputVal))
+
 
 
 Calc = BasicMathOperations()
@@ -40,4 +46,6 @@ Calc = BasicMathOperations()
 
 # Calc.performOperator(9,3,"/")
 
-Calc.squareNumber(8)
+# Calc.squareNumber(8)
+
+Calc.factorial(5)

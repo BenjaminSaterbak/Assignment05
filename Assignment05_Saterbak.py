@@ -63,7 +63,8 @@ class BasicMathOperations:
 
 def main():
     Calc = BasicMathOperations()
-    print("""
+    while True:
+        print("""
 Benjamin's Python Calculor
 ---------------------------
 Please Select an Option Below (1-10)
@@ -78,7 +79,11 @@ Please Select an Option Below (1-10)
 9) Number Power Calculator
 10) Get Data Type
 ---------------------------""")
-    userChoice = int(input("Selection?: "))
+        try:
+            userChoice = int(input("Selection?: "))
+            break
+        except ValueError:
+            print("Invalid Input. Please enter an integer 1-10.")
     print("---------------------------")
     if userChoice == 1:
         firstName = input("Please input your first name: ")
@@ -111,7 +116,27 @@ Please Select an Option Below (1-10)
             except ValueError:
                 print("Invalid input. Please enter integers and a valid operator (+,-,*,/)")
 
-    Calc.performOperator(num1,num2,operator)
+        Calc.performOperator(num1,num2,operator)
+
+    elif userChoice == 4:
+        while True:
+            try:
+                num1 = int(input("Please input your number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.squareNumber(num1)
+
+
+
+
+
+
+
+
+
+
 # Calc.greetUser("Benjamin","Saterbak")
 
 # Calc.addNumbers(4,7)

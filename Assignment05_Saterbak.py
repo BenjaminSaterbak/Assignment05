@@ -122,7 +122,7 @@ Please Select an Option Below (1-10)
     elif userChoice == 4:
         while True:
             try:
-                num1 = int(input("Please input your number: "))
+                num1 = int(input("Please input a number: "))
                 break
             except ValueError:
                 print("Invalid input. Please enter integers")
@@ -132,8 +132,11 @@ Please Select an Option Below (1-10)
     elif userChoice == 5:
         while True:
             try:
-                num1 = int(input("Please input your number: "))
-                break
+                num1 = int(input("Please input a positive number: "))
+                if num1 >= 0:
+                    break
+                else:
+                    print("Invalid input. Please enter a positive number.")
             except ValueError:
                 print("Invalid input. Please enter integers")
         
@@ -147,10 +150,27 @@ Please Select an Option Below (1-10)
                 break
             except ValueError:
                 print("Invalid input. Please enter integers")
-        
+        if num1 < num2:
+            pass
+        else:
+            num2,num1=num1,num2
         Calc.countBetween(num1,num2)
 
     elif userChoice == 7:
+        while True:
+            try:
+                num1 = int(input("Please input your first positive number: "))
+                num2 = int(input("Please enter your second positive number: "))
+                if (num1 and num2) > 0:
+                    break
+                else:
+                    print("Invalid input. Please enter positive integers")
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.calculateHypotenuse(num1,num2)
+
+    elif userChoice == 8:
         while True:
             try:
                 num1 = int(input("Please input your first number: "))
@@ -159,7 +179,22 @@ Please Select an Option Below (1-10)
             except ValueError:
                 print("Invalid input. Please enter integers")
         
-        Calc.calculateHypotenuse(num1,num2)
+        Calc.rectangleArea(num1,num2)
+
+    elif userChoice == 9:
+        while True:
+            try:
+                num1 = int(input("Please input your first number: "))
+                num2 = int(input("Please enter your second number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.numberPower(num1,num2)
+
+    elif userChoice == 10:
+        value = input("Please enter your data: ")
+        print("Your data type is: "+str(Calc.getType(value)))
 
 
 

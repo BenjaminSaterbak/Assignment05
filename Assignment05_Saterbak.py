@@ -81,11 +81,23 @@ Please Select an Option Below (1-10)
 10) Get Data Type
 ---------------------------""")
     userChoice = int(input("Selection?: "))
+    print("---------------------------")
     if userChoice == 1:
         firstName = input("Please input your first name: ")
         lastName = input("Please input your last name: ")
         Calc.greetUser(firstName,lastName)
-    
+
+    elif userChoice == 2:
+        while True:
+        # Error code from: https://pieriantraining.com/python-tutorial-how-to-take-an-integer-input-in-python/#:~:text=In%20Python%2C%20we%20can%20take%20user%20input%20using%20the%20%60input,returns%20it%20as%20a%20string.&text=In%20the%20code%20above%2C%20we,input()%60%20into%20an%20integer.
+            try:
+                num1 = int(input("Please input your first number: "))
+                num2 = int(input("Please enter your second number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter integers")
+        
+        Calc.addNumbers(num1,num2)
 
 # Calc.greetUser("Benjamin","Saterbak")
 

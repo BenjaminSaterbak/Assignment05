@@ -55,6 +55,12 @@ class BasicMathOperations:
         area = num1*num2
         print("The Area of a Square with Sides",str(num1),"and",str(num2),"is:",str(area))
 
+    def numberPower(self,num1,num2):
+        power = num1**num2
+        print(str(num1)+"^"+str(num2),"=",str(power))
+
+
+
 Calc = BasicMathOperations()
 
 # Calc.greetUser("Benjamin","Saterbak")
@@ -73,4 +79,6 @@ Calc = BasicMathOperations()
 
 # Calc.calculateHypotenuse(5,12)
 
-Calc.rectangleArea(4,7)
+# Calc.rectangleArea(4,7)
+
+Calc.numberPower(2,4)

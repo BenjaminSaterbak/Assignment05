@@ -1,17 +1,22 @@
 # Assignment05 on OOP by Benjamin Saterbak
 
+# BasicMathOperations Class
 class BasicMathOperations:
 
+    # Init constructor
     def __init__(self):
         pass
 
+    # Greet user method
     def greetUser(self,firstName,lastName):
         print("Welcome to Benjamin's Python Calculator, "+str(firstName),str(lastName))
 
+    # Add Numbers Method
     def addNumbers(self,num1,num2):
         sum = num1 + num2
         print("The Sum is: "+str(sum))
 
+    # Operator math method
     def performOperator(self,num1,num2,operator):
         outputVal = None
         if operator == "+":
@@ -24,46 +29,56 @@ class BasicMathOperations:
             outputVal = num1 / num2
         print(str(num1)+str(operator)+str(num2),"=",str(outputVal))
 
+    # Square number method
     def squareNumber(self,num):
         outputVal = num**2
         print(str(num),"Squared is:",str(outputVal))
 
+    # Factorial method
     def factorial(self,num):
         outputVal = 1
         for i in range(num,0,-1):
             outputVal *= i
         print("The Factorial of",str(num),"is:",str(outputVal))
 
+    # Count between two numbers method
     def countBetween(self,num1,num2):
         print("The Sequence of numbers between",str(num1),"and",str(num2),"is:")
         for i in range(num1,num2+1):
             print(i)
 
+    # Square number method for hypotenuse calculation
     def calculateSquare(self,num):
         square = num**2
         return square
     
+    # Hypotenuse calculation method
     def calculateHypotenuse(self,num1,num2):
         num1Sqr = self.calculateSquare(num1)
         num2Sqr = self.calculateSquare(num2)
         hypotenuse = ((num1Sqr)+(num2Sqr))**(1/2)
         print("The Hypotenuse of a triangle with sides",str(num1),"and",str(num2),"is:",hypotenuse)
         
+    # Rectangle Area method
     def rectangleArea(self,num1,num2):
         area = num1*num2
         print("The Area of a Square with Sides",str(num1),"and",str(num2),"is:",str(area))
 
+    # Number to a power method
     def numberPower(self,num1,num2):
         power = num1**num2
         print(str(num1)+"^"+str(num2),"=",str(power))
 
+    # Get data type method
     def getType(self,variable):
         return type(variable)
 
-
+# Main
 def main():
+    # Create Calc object from BasicMathOperations class
     Calc = BasicMathOperations()
     while True:
+        # User interaction menu
         print("""
 Benjamin's Python Calculor
 ---------------------------
@@ -79,6 +94,7 @@ Please Select an Option Below (1-10)
 9) Number Power Calculator
 10) Get Data Type
 ---------------------------""")
+        # If the user selects a number between 1 and 11, continue to the method calls
         try:
             userChoice = int(input("Selection?: "))
             if (userChoice > 0) and (userChoice < 11):
@@ -86,6 +102,9 @@ Please Select an Option Below (1-10)
         except ValueError:
             print("Invalid Input. Please enter an integer 1-10.")
     print("---------------------------")
+    
+    # User input and method calls based on numerical choice
+
     if userChoice == 1:
         firstName = input("Please input your first name: ")
         lastName = input("Please input your last name: ")
